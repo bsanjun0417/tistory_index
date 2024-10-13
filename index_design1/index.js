@@ -1,7 +1,4 @@
-$(document).ready(function() {
-    
-
-    function test1(a1, a2,a3) {
+function test1(a1, a2,a3) {
                  var idxDiv = $('<div class="idx"></div>');
              
              // title1 div 생성
@@ -58,7 +55,8 @@ $(document).ready(function() {
                  scrollTop: $("#" + target).offset().top // 해당 ID로 부드럽게 이동
              }, 500);
          });
-     }
     console.log("script connect");
+}
+
      //(목차ui를 넣은 곧 값,제목이되는 태그,블로그이름)
- });
+
