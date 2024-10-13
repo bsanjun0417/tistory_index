@@ -32,7 +32,7 @@ function test1(a1, a2,a3) {
   
  
          $(a2).each(function(idx) {  
-                 let content = $(this).html(); 
+                 let content = $(this).html().text().trim();
                  let verification = content === "티스토리툴바" || content === "단축키" || content ==="내 블로그" || content =="블로그 게시글" || content =="모든 영역" 
                  || content === "&nbsp;"   || content.includes("카테고리의") === true
  
