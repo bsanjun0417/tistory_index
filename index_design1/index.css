@@ -1,0 +1,48 @@
+*{margin: 0;}
+        
+.idx{
+    position: relative;
+    width: 45vw;
+    background-color: #C3C7CB;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.title1{
+    width: 43.5vw;
+    height: 25px;
+    margin: 4px auto;         
+    background-color: #0000A8;
+    display: flex;
+    justify-content: space-between;
+}
+.b_name{
+    color: white;
+}
+.mainbox{
+    background-color: #e6e6e6;
+    width: 43.5vw;
+    margin: 7px auto;     
+
+
+}
+.mainbox >ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+}
+.b1{
+    background-color: #BFC6C7;
+    width: 15px;
+    height: 15px;
+    margin: auto 0;
+    margin-right: 2px;
+    border: 0.5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+.b1::before {
+content: "×"; /* 여기서 "X"를 삽입 */
+}
