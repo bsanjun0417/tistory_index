@@ -33,17 +33,25 @@ function test1(a1, a2,a3) {
  
          $(a2).each(function(idx) {  
                   let content = $(this).html(); 
-                 let textContent = $('<div>').html(content).text().trim();
-                 let verification = textContent === "티스토리툴바" || textContent === "단축키" || textContent ==="내 블로그" || textContent =="블로그 게시글" || textContent =="모든 영역" 
-                 || textContent === "&nbsp;"   || textContent.includes("카테고리의") === true
+                 let verification = content === "티스토리툴바" || content === "단축키" || content ==="내 블로그" || content =="블로그 게시글" || content =="모든 영역" 
+                 || content === "&nbsp;"   || content.includes("카테고리의") === true
  
                  // 만약 content가 '333'이라면 추가하지 않음
                  if (verification) {
                      return; // 현재 반복을 건너뜁니다.
                  }
- 
+                //내부의b태그나 u태그가있으면 빼고 목차에 넣어짐 
+                 if (content.includes("<b>") ) {
+                    content = content.replace(/<b>/g, "").replace(/<\/b>/g, "");
+                }
+                else if(content.includes("<u>")){
+                    content = content.replace(/<u>/g, "").replace(/<\/u>/g, "");
+                }
+
+
                  let tag1 = $("<li>"); // li 요소 생성
                  let newLink = $("<a>").attr("href", "sec" + (idx + 1)).text(content); // 링크 텍스트 설정
+           
                  tag1.append(newLink); // li에 링크 추가
                  $(".mainbox > ul").append(tag1); // ul에 li 추가
  });
