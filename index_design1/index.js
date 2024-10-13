@@ -59,8 +59,6 @@ $(document).ready(function() {
              }, 500);
          });
      }
- 
-     test1("#article-view", "h2","개발블로그");
- 
+  
      //(목차ui를 넣은 곧 값,제목이되는 태그,블로그이름)
  });
